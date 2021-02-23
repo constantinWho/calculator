@@ -39,6 +39,14 @@ clearBtn.onclick = () => clear();
 negativeBtn.onclick = () => negative();
 dotBtn.onclick = () => displayNumber(dot);
 backSpace.onclick = () => callBackSpace();
+window.addEventListener("keydown", setInput);
+
+// keboard support
+function setInput(e) {
+    if (e >= 0 & e <= 9) {
+        displayNumber("num" + e);
+    }
+}
 
 
 // Operations
